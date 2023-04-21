@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    brahches:
+      - main
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        go: ["stable", "oldstable"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: ${{ matrix.go }}
+      - run: go test ./...
