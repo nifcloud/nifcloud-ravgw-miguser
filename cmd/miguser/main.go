@@ -13,6 +13,11 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+const (
+    name = "miguser"
+    version = "1.0.0"
+)
+
 var CSVHEADER = []string{"UserName", "Password", "Description"}
  
 // outputToCsv returns 2d slices for csv encoding using encoding/csv

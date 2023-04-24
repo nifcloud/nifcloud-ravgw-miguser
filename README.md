@@ -2,16 +2,21 @@
 
 ## Overview
 
-miguserは、ニフクラのサービスであるリモートアクセスVPNゲートウェイ(RemoteAccessVpnGateway / RAVGW)のユーザー情報の移行を支援 するツールです  
+miguserは、ニフクラのサービスであるリモートアクセスVPNゲートウェイ(RemoteAccessVpnGateway / RAVGW)のユーザー情報の移行を支援するツールです  
 miguserを使うことで既存のRAVGWからRAVGWへ簡単にユーザー情報を一括移行することができます  
 RAVGWv1をRAVGWv2に置き換える際などにご利用いただけます
 
 ## Install
 
+### Go
+
+```
+go install github.com/nifcloud/nifcloud-ravgw-miguser/cmd/miguser@latest
+```
+
 ### バイナリ
 
 https://github.com/nifcloud/nifcloud-ravgw-miguser/releases
-※ソースコードは今後公開予定となります
 
 ## Usage
 
@@ -92,7 +97,7 @@ user-2,user-2-password,user-2-description
 - 移行先RAVGWが配置されているリージョン
   - 確認方法: https://pfs.nifcloud.com/api/endpoint.htm
     - 例) リージョン: `east-1`、エンドポイント: `https://jp-east-1.computing.api.nifcloud.com/api/`の場合
-　    - `east-1`ではなく`jp-east-1`を指定してください
+      - `east-1`ではなく`jp-east-1`を指定してください
 - 移行先ユーザーのAccessKey, SecretAccessKey
   - 確認方法: https://pfs.nifcloud.com/help/acc/key.htm
 - 移行先RAVGWのRemoteAccessVpnGatewayID
@@ -123,6 +128,6 @@ user-2,user-2-password,user-2-description
 ```
 #### お問い合わせ
 
-ツールに関するお問い合わせは[ベーシックサポート（トラブル窓口）](https://pfs.nifcloud.com/inquiry/support.htm)のサポート範囲 外となります  
+ツールに関するお問い合わせは[ベーシックサポート（トラブル窓口）](https://pfs.nifcloud.com/inquiry/support.htm)のサポート範囲外となります  
 ツールに関するお問い合わせは[Issue](https://github.com/nifcloud/nifcloud-ravgw-miguser/issues)を起票してください  
-コミュニティベースでのサポートとなります  
+コミュニティベースでのサポートとなります

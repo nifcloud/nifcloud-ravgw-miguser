@@ -1,6 +1,6 @@
 module github.com/nifcloud/nifcloud-ravgw-miguser
 
-go 1.19
+go 1.20
 
 require (
 	github.com/nifcloud/nifcloud-sdk-go v1.20.0
